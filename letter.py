@@ -1,18 +1,11 @@
-def Matrix():
+def StrCounter():
     try:
-        a = int(input("Кол-во столбцов в матрице: "))
-        b = int(input("Кол-во строк в матрице: "))
-        c = int(input("Начальное число: "))
-        d = int(input("Шаг: "))
-        matrix = []
-        for i in range(b):
-            matrix.append([])
-            for j in range(a):
-                matrix[i].append(c)
-                c += d
-        for i in range(b):
-            for j in range(a):
-                print(matrix[i][j], end = " ")
-            print("")
+        str = input("Введите строку: ")
+        space = str.count(" ")
+        comma = str.count(",")
+        strlen = len(str)
+        print("Количество символов: ", strlen)
+        print("Количество пробелов: ", space)
+        print("Количество запятых: ", comma)
     except Exception:
         print("Ошибка ввода данных")
